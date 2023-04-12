@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/layout_top_btn"
+        android:background="@color/white"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/back_btn"
+            android:src="@drawable/ic_close"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:onClick="closeAcEditSong"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/album_image_edit"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:src="@drawable/tempmusicicon"
+        android:layout_below="@id/layout_top_btn"
+        android:layout_centerHorizontal="true" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nameSong_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text"
+        android:layout_below="@+id/album_image_edit">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nameSong_edit"
+            android:hint="Song name"
+            android:text="Enter new song name"
+            android:background="@color/white"
+            android:textColor="#5E5E63"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_nameArtist_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:endIconMode="clear_text"
+        android:layout_below="@id/layout_nameSong_edit">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/nameArtist_edit"
+            android:hint="Artist name"
+            android:text="Enter new artist name"
+            android:background="@color/white"
+            android:textColor="#5E5E63"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_createalbum"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowRadius="10"
+            android:id="@+id/btn_accept_edit"
+            android:layout_marginRight="5dp"
+            android:text="Accept" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowRadius="10"
+            android:id="@+id/btn_cancel_edit"
+            android:layout_marginLeft="5dp"
+            android:text="Cancel"
+            android:onClick="closeAcEditSong"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
